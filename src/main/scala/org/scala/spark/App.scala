@@ -21,7 +21,7 @@ object App {
     val ipDF = fileDF.select(regexp_extract($"value","""^.*\s/([^\s]+)$""", 1).as("ip"))
     ipDF.show(3)
 
-    ipDF.printSchema()
+
    // val cleanDF = ipDF.select(regexp_extract($"ipAddr","""^.*\s/([^\s]+)$""", 1).as("ip"))
 
     //aggregated DF
